@@ -2,6 +2,7 @@
   "name": "weather-dashboard-react",
   "version": "1.0.0",
   "description": "Real-time Weather Dashboard with React",
+  "homepage": "https://keshavja29.github.io/weather-dashboard-react",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
