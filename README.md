@@ -121,4 +121,4 @@ MIT License
 
 ---
 
-**Made with ❤️ by [Keshav Jat](https://github.com/Keshavja29)**
+**Made with ❤️ by [Keshav](https://github.com/Keshavja29)**
