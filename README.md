@@ -2,6 +2,12 @@
 
 A beautiful, real-time weather dashboard built with React that provides current weather conditions, 7-day forecasts, and interactive weather maps.
 
+## 🌐 Live Demo
+
+**🔗 [View Live Demo](https://weather-dashboard-react-git-main-keshavs-projects-ff4dde9b.vercel.app)**
+
+---
+
 ## ✨ Features
 
 - **Real-time Weather Data** - Current temperature, humidity, wind speed
@@ -112,3 +118,7 @@ Add environment variable in Vercel dashboard:
 ## 📄 License
 
 MIT License
+
+---
+
+**Made with ❤️ by [Keshav Jat](https://github.com/Keshavja29)**
