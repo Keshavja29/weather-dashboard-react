@@ -72,30 +72,33 @@ function App() {
 
   return (
     <div className="App">
-      <header className="app-header">
-        <h1>🌤️ Weather Dashboard</h1>
-        <div className="header-controls">
-          <button onClick={toggleUnit} className="unit-toggle">
-            {unit === 'metric' ? '°C' : '°F'}
-          </button>
-          <button onClick={getLocation} className="location-btn">
-            📍 Use My Location
-          </button>
-        </div>
-      </header>
+      <div className="app-container">
+        <header className="app-header">
+          <div className="greeting">Welcome</div>
+          <h1>Weather Forecast</h1>
+          <div className="header-controls">
+            <button onClick={toggleUnit} className="unit-toggle">
+              {unit === 'metric' ? '°C' : '°F'}
+            </button>
+            <button onClick={getLocation} className="location-btn">
+              📍 Use My Location
+            </button>
+          </div>
+        </header>
 
-      <SearchBar onSearch={handleSearch} />
+        <SearchBar onSearch={handleSearch} />
 
-      {loading && <div className="loading">Loading weather data...</div>}
-      {error && <div className="error">{error}</div>}
+        {loading && <div className="loading">Loading weather data...</div>}
+        {error && <div className="error">{error}</div>}
 
-      {weather && !loading && (
-        <>
-          <WeatherCard weather={weather} unit={unit} />
-          {forecast && <WeatherChart forecast={forecast} unit={unit} />}
-          {forecast && <Forecast forecast={forecast} unit={unit} />}
-        </>
-      )}
+        {weather && !loading && (
+          <>
+            <WeatherCard weather={weather} unit={unit} />
+            {forecast && <WeatherChart forecast={forecast} unit={unit} />}
+            {forecast && <Forecast forecast={forecast} unit={unit} />}
+          </>
+        )}
+      </div>
     </div>
   );
 }
