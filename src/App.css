@@ -1,62 +1,118 @@
 .App {
   min-height: 100vh;
   padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
 }
 
 .app-header {
   text-align: center;
   color: white;
   margin-bottom: 30px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .app-header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.app-header h1::before {
+  content: '🌤️';
+  font-size: 3.5rem;
 }
 
 .header-controls {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .unit-toggle,
 .location-btn {
-  padding: 10px 20px;
+  padding: 12px 30px;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   background: white;
   color: #667eea;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .unit-toggle:hover,
 .location-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.unit-toggle:active,
+.location-btn:active {
+  transform: translateY(-1px);
 }
 
 .loading {
   text-align: center;
   color: white;
-  font-size: 1.5rem;
-  padding: 50px;
+  font-size: 2rem;
+  padding: 100px;
+  font-weight: 600;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
 .error {
   text-align: center;
-  color: #ff6b6b;
+  color: #ff4757;
   background: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 15px;
   margin: 20px auto;
   max-width: 500px;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 30px rgba(255, 71, 87, 0.3);
+  border-left: 5px solid #ff4757;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .app-header h1::before {
+    font-size: 2.5rem;
+  }
+  
+  .header-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .unit-toggle,
+  .location-btn {
+    width: 100%;
+  }
 }
