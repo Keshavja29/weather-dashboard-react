@@ -8,38 +8,38 @@
 .search-input {
   flex: 1;
   padding: 18px 25px;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  color: white;
   outline: none;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
 }
 
 .search-input::placeholder {
-  color: #999;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .search-input:focus {
-  box-shadow: 0 10px 35px rgba(102, 126, 234, 0.4);
-  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .search-button {
-  padding: 18px 40px;
-  border: none;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 18px 35px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
   color: white;
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 500;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -47,12 +47,14 @@
 
 .search-button::before {
   content: '🔍';
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .search-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .search-button:active {
