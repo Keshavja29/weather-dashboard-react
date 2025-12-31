@@ -1,85 +1,85 @@
 .forecast-container {
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 1200px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 40px auto;
+  max-width: 900px;
 }
 
 .forecast-container h3 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
 }
 
 .forecast-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 15px;
 }
 
-.forecast-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+.forecast-item {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
   padding: 20px;
-  border-radius: 15px;
   text-align: center;
   transition: all 0.3s ease;
+  color: white;
 }
 
-.forecast-card:hover {
+.forecast-item:hover {
+  background: rgba(255, 255, 255, 0.12);
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .forecast-day {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .forecast-icon {
   font-size: 3rem;
-  margin: 10px 0;
+  margin: 15px 0;
+  filter: drop-shadow(0 5px 15px rgba(255, 255, 255, 0.1));
 }
 
 .forecast-temp {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
   margin: 10px 0;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.temp-high {
-  color: #fff;
-}
-
-.temp-low {
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .forecast-condition {
-  font-size: 0.9rem;
-  margin: 10px 0;
-  text-transform: capitalize;
-  opacity: 0.9;
-}
-
-.forecast-details {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
   font-size: 0.85rem;
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: capitalize;
+  margin-top: 10px;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .forecast-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .forecast-item {
+    padding: 15px;
+  }
+  
+  .forecast-icon {
+    font-size: 2.5rem;
+  }
+  
+  .forecast-temp {
+    font-size: 1.3rem;
   }
 }
